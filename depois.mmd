@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant T as tela:TelaPedido
+    participant P as pedido:Pedido
+    participant D as politica:DescontoPme
+    T->>P: calcular_total()
+    P->>D: calcular(5000.00)
+    D-->>P: 750.00
+    P-->>T: 4250.00

@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant T as tela:TelaPedido
+    participant P as pedido:PedidoCondicional
+    participant E as empresa:Empresa
+    T->>P: calcular_total()
+    P->>E: obter_porte()
+    E-->>P: "pme"
+    P-->>T: 4250.00
